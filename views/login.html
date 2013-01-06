@@ -1,0 +1,24 @@
+{% extends "main.html" %}
+
+{% block maincontent %}
+
+<h1>Login</h1>
+
+{% if failed %}
+
+    <strong>Login failed!</strong> Check your credentials and try again.
+
+{% endif %}
+
+<form class="form" action= "/login" method="POST">
+	<label for="username">Username</label>
+	<input type="text" value="{{ username }}" name="username"/>
+	<label for="password">Password</label>
+	<input type="password" name="password"/>
+	<button type="submit" class="btn">Login</button>
+</form>
+
+<a href="/forgot">Forgot password</a>
+
+
+{% endblock %}

@@ -1,0 +1,25 @@
+application: webapp2-user-authentication
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+handlers:
+- url: .*
+  script: main.app
+
+- url: /signup
+  script: main.app
+  secure: always
+
+- url: /login
+  script: main.app
+  secure: always
+
+- url: /forgot
+  script: main.app
+  secure: always
+
+libraries:
+- name: webapp2
+  version: "2.5.1"
