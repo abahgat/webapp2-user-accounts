@@ -4,9 +4,9 @@ This is a skeleton implementation of user account management with webapp2.
 
 You will have to take care of the following items:
 
-* -Implement user registration-
-* -Write code to handle login-
-* -Setup email verification and password recovery- (This has been done for you already)
+* ~~Implement user registration~~
+* ~~Write code to handle login~~
+* ~~Setup email verification and password recovery~~ (This has been done for you already)
 * Send email verification and password recovery messages via email
 * [Configure](https://developers.google.com/appengine/docs/python/config/appconfig#Secure_URLs) login and password reset urls to use https (you will have to deploy your app to test this)
 
