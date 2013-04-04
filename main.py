@@ -217,7 +217,7 @@ class SetPasswordHandler(BaseHandler):
     password = self.request.get('password')
     old_token = self.request.get('t')
 
-    if not password and password != self.request.get('confirm_password'):
+    if not password or password != self.request.get('confirm_password'):
       self.display_message('passwords do not match')
       return
 
