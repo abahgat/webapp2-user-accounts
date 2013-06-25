@@ -71,7 +71,9 @@ class BaseHandler(webapp2.RequestHandler):
       """Shortcut to access the current session."""
       return self.session_store.get_session(backend="datastore")
 
-  def render_template(self, view_filename, params={}):
+  def render_template(self, view_filename, params=None):
+    if not params:
+      params = {}
     user = self.user_info
     params['user'] = user
     path = os.path.join(os.path.dirname(__file__), 'views', view_filename)
