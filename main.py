@@ -177,7 +177,7 @@ class VerificationHandler(BaseHandler):
     verification_type = kwargs['type']
 
     # it should be something more concise like
-    # self.auth.get_user_by_token(user_id, signup_token
+    # self.auth.get_user_by_token(user_id, signup_token)
     # unfortunately the auth interface does not (yet) allow to manipulate
     # signup tokens concisely
     user, ts = self.user_model.get_by_auth_token(int(user_id), signup_token,
